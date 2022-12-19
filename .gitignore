@@ -1,0 +1,5 @@
+__pycache__
+*.tar.gz
+*.tar.xz
+config.example.py
+USERBOT.*
