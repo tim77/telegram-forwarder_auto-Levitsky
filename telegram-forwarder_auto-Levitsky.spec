@@ -23,7 +23,6 @@ Requires: python3-pip
 A telegram forwarder that will automatically forward message from Another
 telegram channel(s) / group(s) to Your telegram channel / group.
 
-
 To enable:
   systemctl --user enable --now telegram-forwarder_auto-Levitsky
 
@@ -41,6 +40,7 @@ mkdir -p %{buildroot}/opt/%{name}
 install -Dpm 0644 %{name}.service -t %{buildroot}%{_userunitdir}
 install -Dpm 0644 requirements.txt -t %{buildroot}/opt/%{name}
 install -Dpm 0755 %{name}.py -t %{buildroot}/opt/%{name}
+install -Dpm 0644 config.py -t %{buildroot}/opt/%{name}
 install -Dpm 0755 pip-install-and-upgrade.sh -t %{buildroot}/opt/%{name}
 
 
