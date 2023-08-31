@@ -36,7 +36,7 @@ To enable:
 
 
 %install
-mkdir -p %{buildroot}/opt/%{name}
+mkdir -p -m 777 %{buildroot}/opt/%{name}
 install -Dpm 0644 %{name}.service -t %{buildroot}%{_userunitdir}
 install -Dpm 0644 requirements.txt -t %{buildroot}/opt/%{name}
 install -Dpm 0755 %{name}.py -t %{buildroot}/opt/%{name}
