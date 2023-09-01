@@ -10,8 +10,9 @@ StartLimitBurst=100000
 
 [Service]
 Type=simple
-Restart=on-failure
+Restart=always
 ExecStart=/opt/telegram-forwarder_auto-Levitsky/telegram-forwarder_auto-Levitsky.py
 
 [Install]
-WantedBy=multi-user.target
+# Use default.target instead of multi-user.target for user units
+WantedBy=default.target
