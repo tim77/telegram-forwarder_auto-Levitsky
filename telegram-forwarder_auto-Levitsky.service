@@ -11,6 +11,7 @@ StartLimitBurst=100000
 [Service]
 Type=simple
 Restart=always
+RuntimeMaxSec=1h
 ExecStart=/opt/telegram-forwarder_auto-Levitsky/telegram-forwarder_auto-Levitsky.py
 
 [Install]
